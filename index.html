@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Rental Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Property Rental Management System</h1>
+    <p>Find your perfect rental property</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#properties">Properties</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="hero">
+    <h2>Find Your Dream Rental Home</h2>
+    <p>Search and manage rental properties easily.</p>
+</section>
+
+<section id="properties" class="container">
+
+    <h2>Available Properties</h2>
+
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search by location...">
+        <button onclick="searchProperty()">Search</button>
+    </div>
+
+    <div id="propertyList" class="property-container">
+
+        <div class="property" data-location="Chennai">
+            <h3>2 BHK Apartment</h3>
+            <p>📍 Chennai</p>
+            <p>₹18,000 / month</p>
+            <p>Bedrooms: 2 | Bathrooms: 2</p>
+            <button onclick="rentProperty('2 BHK Apartment')">
+                Rent Now
+            </button>
+        </div>
+
+        <div class="property" data-location="Bangalore">
+            <h3>3 BHK House</h3>
+            <p>📍 Bangalore</p>
+            <p>₹25,000 / month</p>
+            <p>Bedrooms: 3 | Bathrooms: 2</p>
+            <button onclick="rentProperty('3 BHK House')">
+                Rent Now
+            </button>
+        </div>
+
+        <div class="property" data-location="Coimbatore">
+            <h3>1 BHK Flat</h3>
+            <p>📍 Coimbatore</p>
+            <p>₹10,000 / month</p>
+            <p>Bedrooms: 1 | Bathrooms: 1</p>
+            <button onclick="rentProperty('1 BHK Flat')">
+                Rent Now
+            </button>
+        </div>
+
+        <div class="property" data-location="Madurai">
+            <h3>2 BHK House</h3>
+            <p>📍 Madurai</p>
+            <p>₹14,000 / month</p>
+            <p>Bedrooms: 2 | Bathrooms: 2</p>
+            <button onclick="rentProperty('2 BHK House')">
+                Rent Now
+            </button>
+        </div>
+
+    </div>
+
+    <p id="message"></p>
+
+</section>
+
+<section class="management">
+
+    <h2>Rental Management</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Properties</h3>
+            <p id="totalProperties">4</p>
+        </div>
+
+        <div class="card">
+            <h3>Available Properties</h3>
+            <p id="availableProperties">4</p>
+        </div>
+
+        <div class="card">
+            <h3>Rented Properties</h3>
+            <p id="rentedProperties">0</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact" class="contact">
+
+    <h2>Contact Us</h2>
+
+    <input type="text" id="name" placeholder="Enter your name">
+    <input type="email" id="email" placeholder="Enter your email">
+    <textarea id="query" placeholder="Enter your message"></textarea>
+
+    <button onclick="sendMessage()">Submit</button>
+
+    <p id="contactMessage"></p>
+
+</section>
+
+<footer>
+    <p>© 2026 Property Rental Management System</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
